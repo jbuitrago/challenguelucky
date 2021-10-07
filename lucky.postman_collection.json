@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "e1b6ee96-77c2-41c1-9ec0-90eb13d34f93",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users?username=jbuitrago4&password=1234567890SSSSSSSSSSSSSSS&address=sanchez de bustamante 1987&cityId=2&name=Jorge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "jbuitrago4"
+						},
+						{
+							"key": "password",
+							"value": "1234567890SSSSSSSSSSSSSSS"
+						},
+						{
+							"key": "address",
+							"value": "sanchez de bustamante 1987"
+						},
+						{
+							"key": "cityId",
+							"value": "2"
+						},
+						{
+							"key": "name",
+							"value": "Jorge"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROFILE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ5LCJpYXQiOjE2MzM2MDc1NTQsImV4cCI6MTYzMzY5Mzk1NH0.IK1oWrRbZrN75aGYUcwWgmpP7y_lyvO3Wm12b_Hi3TY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"jbuitrago\",\n    \"password\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"jbuitrago\",\n    \"password\":\"123456789\",\n    \"name\":\"Jorge\",\n    \"cityId\":2,\n    \"address\":\"Sanchez de Bustamante 2099\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
